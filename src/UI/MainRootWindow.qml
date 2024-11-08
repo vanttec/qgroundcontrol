@@ -121,12 +121,20 @@ ApplicationWindow {
 
     function showPlanView() {
         flyView.visible = false
-        planView.visible = true
+	deliveryView.visible = false
+	planView.visible = true
     }
 
     function showFlyView() {
         flyView.visible = true
-        planView.visible = false
+	planView.visible = false
+	deliveryView.visible = false
+    }
+
+    function showDeliveryView() {
+      flyView.visible = false
+      planView.visible = false
+      deliveryView.visible = true
     }
 
     function showTool(toolTitle, toolSource, toolIcon) {
@@ -257,6 +265,12 @@ ApplicationWindow {
         id:             planView
         anchors.fill:   parent
         visible:        false
+    }
+
+    DeliveryView {
+      id:             deliveryView
+      anchors.fill:   parent
+      visible:        false
     }
 
     footer: LogReplayStatusBar {

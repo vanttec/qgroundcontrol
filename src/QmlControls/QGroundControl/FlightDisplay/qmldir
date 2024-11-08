@@ -45,3 +45,4 @@ OnScreenGimbalController        1.0 OnScreenGimbalController.qml
 FlightDisplayViewGStreamer      1.0 FlightDisplayViewGStreamer.qml
 FlightDisplayViewQtMultimedia   1.0 FlightDisplayViewQtMultimedia.qml
 QGCVideoBackground              1.0 QGCVideoBackground.qml
+DeliveryView                    1.0 DeliveryView.qml
