@@ -85,6 +85,19 @@ Item {
         visible:    !QGroundControl.videoManager.fullScreen
     }
 
+    DeliveryWidget{
+      id:                     deliveryWidget
+      z:                      _fullItemZorder + 2
+      visible:                true
+      // Fix to the bottom left corner
+      anchors.bottom:         parent.bottom
+      anchors.left:           parent.left
+      anchors.top:            parent.verticalCenter
+      anchors.right:          parent.horizontalCenter
+    }
+
+
+    // Text label
     Item {
         id:                 mapHolder
         anchors.top:        toolbar.bottom
@@ -136,6 +149,16 @@ Item {
             visible:                !QGroundControl.videoManager.fullScreen
             utmspActTrigger:        utmspSendActTrigger
             isViewer3DOpen:         viewer3DWindow.isOpen
+
+
+	    /*DeliveryWidget{
+              id:                     deliveryWidget
+	      // Float in the bottom left corner
+	      anchors.bottom:         parent.bottom
+	      anchors.left:           parent.left
+	      anchors.top:            parent.top
+	      anchors.right:          parent.right
+	    }*/
         }
 
         FlyViewCustomLayer {
@@ -190,5 +213,6 @@ Item {
             id:                     viewer3DWindow
             anchors.fill:           parent
         }
+
     }
 }
